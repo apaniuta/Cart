@@ -1,6 +1,6 @@
 ## Shopping cart demo
 
-	Demo app with using React, Redux, React-dnd (drag and drop), Immutable.js. With unit tests using Chai adn Mocha and e2e test using Nightwatch and Selenium.
+Demo app with using React, Redux, React-dnd (drag and drop), Immutable.js. With unit tests using Chai adn Mocha and e2e test using Nightwatch and Selenium.
 
 ###Install
 
