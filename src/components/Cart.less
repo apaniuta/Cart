@@ -1,0 +1,76 @@
+@import "../assets/variables.less";
+
+.base {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  color: @main;
+  background-color: white;
+  padding: 15px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: @box-shadow-main;
+}
+
+.isActive {
+  composes: base;
+
+  background-color: @isActive-bg;
+}
+
+.canDrop {
+  composes: base;
+
+  background-color: @canDrop-bg;
+}
+
+.header {
+  padding-bottom: 5px;
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px double @main;
+  margin-bottom: 10px;
+}
+.hint {
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  font-style: italic;
+  border: 1px dashed @main;
+  margin-bottom: 10px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button {
+  align-self: center;
+  margin: 15px 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: @button-cart-main;
+  color: @button-text;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  &:active {
+    position:relative;
+    top:1px;
+  }
+  &:hover {
+    background: @button-cart-hover;
+    box-shadow: @box-shadow-hover;
+  }
+}
+
+.disabled {
+  composes: button;
+
+  pointer-events: none;
+  background-color: @button-cart-disabled;
+}

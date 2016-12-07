@@ -1,0 +1,86 @@
+@import "../assets/variables.less";
+
+.base {
+  display: flex;
+  background-color: @main-bg;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: @box-shadow-main;
+  cursor: move;
+}
+
+.disabled {
+  composes: base;
+
+  pointer-events: none;
+}
+
+.isDragging {
+  composes: base;
+
+  opacity: 0.4;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: @main;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: bold;
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 20px;
+  align-self: center;
+}
+
+.buy {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: @button-product-main;
+  color: @button-text;
+  text-transform: uppercase;
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  transition: background .3s;
+  &:active {
+    position:relative;
+    top:1px;
+  }
+  &:hover {
+    background: @button-product-hover;
+    box-shadow: @box-shadow-hover;
+  }
+}
+
+.soldOut {
+  user-select: none;
+  cursor: default;
+  padding: 5px 15px;
+  border-radius: 5px;
+  background: @button-product-sold;
+  color: @button-text;
+  text-transform: uppercase;
+  font-weight: bold;
+}
